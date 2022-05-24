@@ -8,6 +8,12 @@ public class ProceduralWorldGenerator
 	private const float TILE_WIDTH = 64f;
 	private const float TILE_HEIGHT = 64f;
 
+	/*
+	 * Details/notes:
+	 * - Sea level should always be 32 units
+	 * - Generate spawnable resources - these can be picked up, thrown, used, interacted with
+	 * - Terrain thru perlin noise
+	 */
 	public void Generate()
 	{
 		int halfTilesX = TILES_X / 2;
