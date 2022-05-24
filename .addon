@@ -9,7 +9,7 @@
   "ResourcePaths": null,
   "HasCode": true,
   "CodePath": "/code/",
-  "RootNamespace": "Sandbox",
+  "RootNamespace": "Demigod",
   "Metadata": {
     "MapList": [
       "facepunch.construct"
