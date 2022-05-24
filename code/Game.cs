@@ -35,5 +35,8 @@ public partial class DemigodGame : Game
 		var sky = new Sky( "materials/skybox/light_test_sky_sunny_basic.vmat" );
 		var envLight = new EnvironmentLightEntity();
 		envLight.Rotation = Rotation.From( 90, 0, 0 );
+
+		var procGen = new ProceduralWorldGenerator();
+		procGen.Generate();
 	}
 }

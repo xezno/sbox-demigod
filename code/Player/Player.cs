@@ -5,6 +5,12 @@ public partial class Player : AnimatedEntity
 	[Net, Predicted] public Hand LeftHand { get; set; }
 	[Net, Predicted] public Hand RightHand { get; set; }
 
+	public CameraMode CameraMode
+	{
+		get => Components.Get<CameraMode>();
+		set => Components.Add( value );
+	}
+
 	public override void Spawn()
 	{
 		base.Spawn();
@@ -20,5 +26,8 @@ public partial class Player : AnimatedEntity
 		// Set up player hands
 		LeftHand = new LeftHand() { Owner = this };
 		RightHand = new RightHand() { Owner = this };
+
+		// Set up camera
+		CameraMode = new Camera();
 	}
 }
