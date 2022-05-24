@@ -1,0 +1,25 @@
+{
+  "Title": "Demigod",
+  "Type": "game",
+  "Org": "alex",
+  "Ident": "demigod",
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "ResourcePaths": null,
+  "HasCode": true,
+  "CodePath": "/code/",
+  "RootNamespace": "Sandbox",
+  "Metadata": {
+    "MapList": [
+      "facepunch.construct"
+    ],
+    "PerMapRanking": false,
+    "LeaderboardType": 0,
+    "RankType": 0,
+    "MapSelect": 4,
+    "GameNetworkType": 1,
+    "MaxPlayers": 1,
+    "MinPlayers": 1
+  }
+}
