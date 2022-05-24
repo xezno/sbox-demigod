@@ -19,6 +19,8 @@ public class ProceduralWorldGenerator
 		int halfTilesX = TILES_X / 2;
 		int halfTilesY = TILES_Y / 2;
 
+		var resources = ResourceLibrary.GetAll<WorldSpawnableResource>().ToList();
+
 		// Generate tiles centered at world origin
 		for ( int x = -halfTilesX; x < halfTilesX; x++ )
 		{
@@ -29,6 +31,17 @@ public class ProceduralWorldGenerator
 					x * TILE_WIDTH,
 					y * TILE_HEIGHT
 				);
+
+				var resource = Rand.FromList( resources );
+				if ( Rand.Float( 0, 1 ) < resource.SpawnFrequency )
+				{
+					Log.Trace( $"Spawned {resource.ResourceName}" );
+					var resourceEntity = new ModelEntity( resource.Model );
+					resourceEntity.Position = new Vector3(
+						x * TILE_WIDTH,
+						y * TILE_HEIGHT
+					);
+				}
 			}
 		}
 	}
