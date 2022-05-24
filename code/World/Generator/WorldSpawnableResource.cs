@@ -2,7 +2,7 @@
 
 namespace Demigod;
 
-[GameResource( "World Spawnable", "w_spwn", "Something that can be procedurally generated, like a rock or a tree.",
+[GameResource( "World Spawnable", "wspwn", "Something that can be procedurally generated, like a rock or a tree.",
 	Icon = "nature", IconBgColor = "#97e889", IconFgColor = "#000000" )]
 public class WorldSpawnableResource : GameResource
 {
