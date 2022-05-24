@@ -12,4 +12,28 @@ public partial class DemigodGame : Game
 	{
 		Log.TraceContext( "Demigod Game Started" );
 	}
+
+	public override void PostLevelLoaded()
+	{
+		base.PostLevelLoaded();
+
+		SetupWorld();
+	}
+
+	public override void ClientJoined( Client cl )
+	{
+		base.ClientJoined( cl );
+
+		var player = new Player();
+		player.Owner = this;
+
+		cl.Pawn = player;
+	}
+
+	private void SetupWorld()
+	{
+		var sky = new Sky( "materials/skybox/light_test_sky_sunny_basic.vmat" );
+		var envLight = new EnvironmentLightEntity();
+		envLight.Rotation = Rotation.From( 90, 0, 0 );
+	}
 }
